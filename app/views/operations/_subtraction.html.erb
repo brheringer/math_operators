@@ -1,0 +1,9 @@
+<%= operation.minuendo %>
+<br/>
+<span class="border-bottom">- <%= operation.subtrahend %></span>
+<br/>
+<% if @with_answers then %>
+    <%= operation.difference %>
+<% else %>
+&nbsp;
+<% end %>

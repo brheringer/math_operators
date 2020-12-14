@@ -1,0 +1,9 @@
+<%= operation.multiplicand %>
+<br/>
+<span class="border-bottom">x <%= operation.multiplier %></span>
+<br/>
+<% if @with_answers then %>
+    <%= operation.product %>
+<% else %>
+&nbsp;
+<% end %>

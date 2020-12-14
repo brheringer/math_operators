@@ -1,0 +1,68 @@
+<%= form_tag(new_operation_path, method: :get) do %>
+  <table class="table table-borderless">
+    <tbody>
+      <tr>
+        <th style="width: 15%">
+          <%= label_tag(:seed, "Seed (optional)") %>
+        </th>
+        <td>
+          <%= text_field_tag(:seed, params[:seed]) %>
+          <img src="/assets/info.svg" title="Use it to reproduce a previously generated operations set, if you know the number.">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= label_tag(:min_digits, "Min Digits") %>
+        </th>
+        <td>
+          <%= text_field_tag(:min_digits, params[:min_digits], :value => 3) %>
+          <img src="/assets/info.svg" title="Ex: if min digits is 3 and max digits is 4, then the operations will use values from 100 to 9999.">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= label_tag(:max_digits, "Max Digits") %>
+        </th>
+        <td>
+          <%= text_field_tag(:max_digits, params[:max_digits], :value => 3) %>
+          <img src="/assets/info.svg" title="Ex: if min digits is 3 and max digits is 4, then the operations will use values from 100 to 9999.">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= label_tag(:fix_digits_for_multiplier, "Fixed Digits for Mutilplier (optional)") %>
+        </th>
+        <td>
+          <%= text_field_tag(:fixed_digits_for_multiplier, params[:fixed_digits_for_multiplier], :value => '') %>
+          <img src="/assets/info.svg" title="Ex: Sometimes you will want to specify a smaller multiplier, like in 1234 x 12 (2 fixed digits).">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= label_tag(:fixed_digits_for_divisor, "Fixed Digits for Divisor (optional, but recommended)") %>
+        </th>
+        <td>
+          <%= text_field_tag(:fixed_digits_for_divisor, params[:fixed_digits_for_divisor], :value => '') %>
+          <img src="/assets/info.svg" title="Ex: Usually you will want to specify a smaller divsor, like in 1234 / 12 (2 fixed digits).">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= label_tag(:quantity_of_each_operation, "Qtd of Each Operation") %>
+        </th>
+        <td>
+          <%= text_field_tag(:quantity_of_each_operation, params[:quantity_of_each_operation], :value => 1) %>
+          <img src="/assets/info.svg" title="How many operations do you want for each selected operation below (addition, subtract, multplication, division)?">
+        </td>
+      </tr>
+      <tr><th></th><td><%= check_box_tag(:with_answers, params[:with_answers]) %> With Answers</td></tr>
+      <tr><th></th><td><%= check_box_tag(:addition, params[:addition], :value => true) %> Addition</td></tr>
+      <tr><th></th><td><%= check_box_tag(:subtraction, params[:subtraction], :value => true) %> Subtraction</td></tr>
+      <tr><th></th><td><%= check_box_tag(:multiplication, params[:multiplication], :value => true) %> Multiplication</td></tr>
+      <tr><th></th><td><%= check_box_tag(:division, params[:division], :value => true) %> Division</td></tr>
+      <tr><th></th><td><%= submit_tag("GO") %></td></tr>
+    </tbody>
+  </table>
+<% end %>
+
+<!--TODO labels, translation, bootstrap-->

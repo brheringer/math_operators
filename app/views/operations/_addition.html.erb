@@ -1,0 +1,9 @@
+<%= operation.parcel1.to_i %>
+<br/>
+<span class="border-bottom">+ <%= operation.parcel2 %></span>
+<br/>
+<% if @with_answers then %>
+    <%= operation.sum %>
+<% else %>
+&nbsp;
+<% end %>

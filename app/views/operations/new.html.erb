@@ -1,0 +1,25 @@
+<div class="row">
+    <% @operations.each do |op| %>
+        <div class="col-3 border text-right">
+            <div style="float: right; text-align: right">
+                <% if op.respond_to? :sum %>
+                    <%= render 'addition', :operation => op %>
+                <% end %>
+                <% if op.respond_to? :difference %>
+                    <%= render 'subtraction', :operation => op %>
+                <% end %>
+                <% if op.respond_to? :product %>
+                    <%= render 'multiplication', :operation => op %>
+                <% end %>
+                <% if op.respond_to? :remainder %>
+                    <%= render 'division', :operation => op %>
+                <% end %> 
+            </div>
+        </div>
+    <% end %>
+</div>
+<div class="row">
+    <div class="col-12 text-center text-secondary">
+        Generated with seed <%= @seed %></h1>
+    </div>
+</div>
