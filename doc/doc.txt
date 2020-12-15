@@ -1,5 +1,4 @@
-BUG! icons not showing up
-TODO linguas: pt-br, en-us, es
+TODO linguas: pt-br, en-us, es (mais ou menos resolvido)
 TODO back button
 TODO option: only division with remainder 0
 TODO option to increase font size
@@ -10,4 +9,4 @@ TODO sa�da est�tica pdf para impress�o
 TODO option or change to: group by operation (currently is alternating operations)
 
 OKOK parametros: seed, d�gitos min-max, opera��es (adi��o, subtra��o, divis�o, multiplica��o), quantidade de opera��es
-
+OKOK BUG! icons not showing up
