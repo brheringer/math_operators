@@ -1,33 +1,21 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  #operations.new
+  label_seed_optional: "Seed (optional)"
+  label_min_digits: "Min Digits"
+  label_max_digits: "Max Digits"
+  label_fixed_digits_for_multiplier: "Fixed Digits for Mutilplier (optional)"
+  label_fixed_digits_for_divisor: "Fixed Digits for Divisor (optional, but recommended)"
+  label_quantity_of_each_operation: "Qtd of Each Operation"
+  label_with_answers: "With Answers"
+  label_addition: "Addition"
+  label_subtraction: "Subtraction"
+  label_multiplication: "Multiplication"
+  label_division: "Division"
+  label_generate: "Generate"
+
+  tip_seed_optional: "Use it to reproduce a previously generated operations set, if you know the number."
+  tip_min_digits: "Ex: If min digits is 3 and max digits is 4, then the operations will use values from 100 to 9999."
+  tip_max_digits: "Ex: If min digits is 3 and max digits is 4, then the operations will use values from 100 to 9999."
+  tip_fixed_digits_for_multiplier: "Ex: Sometimes you will want to specify a smaller multiplier, like in 1234 x 12 (2 fixed digits)."
+  tip_fixed_digits_for_divisor: "Ex: Usually you will want to specify a smaller divsor, like in 1234 / 12 (2 fixed digits)."
+  tip_quantity_of_each_operation: "How many operations do you want for each selected operation below (addition, subtract, multplication, division)?"

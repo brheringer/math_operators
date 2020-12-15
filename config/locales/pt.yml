@@ -1,0 +1,23 @@
+pt:
+  #operations.new
+  label_seed_optional: "Seed (opcional)"
+  label_min_digits: "Mín Dígitos"
+  label_max_digits: "Máx Dígitos"
+  label_fixed_digits_for_multiplier: "Dígitos Fixos para Multiplicador (opcional)"
+  label_fixed_digits_for_divisor: "Dígitos Fixos para Divisor (opcional, mas recomendado)"
+  label_quantity_of_each_operation: "Qtd de Cada Operação"
+  label_with_answers: "Com Repostas"
+  label_addition: "Adição"
+  label_subtraction: "Subtração"
+  label_multiplication: "Multiplicação"
+  label_division: "Divisão"
+  label_generate: "Gerar"
+
+  tip_seed_optional: "Use para reproduzir um conjunto de operações gerado anteriormente, se souber o número."
+  tip_min_digits: "Ex: Se mín dígitos é 3 e máx dígitos é 4, então as operações usarão valores de 100 a 999."
+  tip_max_digits: "Ex: Se mín dígitos é 3 e máx dígitos é 4, então as operações usarão valores de 100 a 999."
+  tip_fixed_digits_for_multiplier: "Ex: Às vezes você vai querer especificar um multiplicador menor, como em 1234 x 12 (2 dígitos fixos)."
+  tip_fixed_digits_for_divisor: "Ex: Geralmente você vai gerer especificar um divisor menor, como em 1234 / 12 (2 dígitos fixos)."
+  tip_quantity_of_each_operation: "Quantas operações você quer para cada operação selecionada abaixo (adição, subtração, multiplicação, divisão)?"
+
+
