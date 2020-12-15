@@ -3,11 +3,12 @@ class OperationsGenerator
     attr_accessor :addition, :subtraction, :multiplication, :division
     attr_reader :generated_operations
 
-    def initialize()
+    def initialize
         @generated_operations = []
     end
 
-    def generate()
+    def generate
+        clear
         initialize_numbers_generators
         @quantity_of_each_operation.times do
             @generated_operations.push generate_addition if @addition
@@ -15,6 +16,10 @@ class OperationsGenerator
             @generated_operations.push generate_multiplication if @multiplication
             @generated_operations.push generate_division if @division
         end
+    end
+
+    def clear
+        @generated_operations.clear
     end
 
     private
@@ -30,26 +35,26 @@ class OperationsGenerator
 
     def generate_addition
         n = generate_two_numbers
-        Addition.new(n[1], n[0])
+        Addition.new(n.max, n.min)
     end
 
     def generate_subtraction
         n = generate_two_numbers
-        Subtraction.new(n[1], n[0])
+        Subtraction.new(n.max, n.min)
     end
 
     def generate_multiplication
         n = []
         n.push @multiplier_generator.generate
         n.push @number_generator.generate
-        Multiplication.new(n[1], n[0])
+        Multiplication.new(n.max, n.min)
     end
 
     def generate_division
         n = []
         n.push @divisor_generator.generate
         n.push @number_generator.generate
-        Division.new(n[1], n[0])
+        Division.new(n.max, n.min)
     end
 
     def generate_two_numbers

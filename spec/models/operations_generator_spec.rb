@@ -46,4 +46,15 @@ describe OperationsGenerator do
         expect(op[0].multiplicand).to be_between(100, 999).inclusive
         expect(op[0].multiplier).to be_between(1, 9).inclusive
     end
+
+    it 'should generate divisor <= dividend' do
+        subject.division = true
+        50.times do #ok, it could give a false positive, but... come on
+            subject.generate
+            op = subject.generated_operations
+
+            expect(op.length).to eq 1
+            expect(op[0].dividend >= op[0].divisor).to be true
+        end
+    end
 end
